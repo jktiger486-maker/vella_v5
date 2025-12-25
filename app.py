@@ -2541,6 +2541,15 @@ symbol_info = SymbolInfo(
 
 feed.symbol_info = symbol_info
 
+# ============================================================
+# [ENGINE_RULE]
+# [ER-BOOT-API-001] BINANCE API KEY LOAD (V3 STYLE)
+# - systemd + EnvironmentFile(/etc/vella.env) 단일 경로
+# - fallback / dotenv / try-except 금지
+# ============================================================
+
+BINANCE_API_KEY = os.environ["BINANCE_API_KEY"]
+BINANCE_API_SECRET = os.environ["BINANCE_API_SECRET"]
 
 
 # ============================================================
